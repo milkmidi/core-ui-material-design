@@ -1,0 +1,17 @@
+// core overrides
+$sidebar-bg: #3a3a3a;
+$sidebar-width: 250px;
+$mobile-sidebar-width: 250px;
+
+// _slidebar.scss
+$sidebar-nav-link-active-bg:rgba(255,255,255,0.3);
+$sidebar-nav-link-hover-bg: rgba(255,255,255,0.1);
+
+// breadcrumb.scss
+$breadcrumb-borders: none;
+
+
+
+%shadow {
+  box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 0, 0, 0.2);
+}
