@@ -1,20 +1,19 @@
 'use strict'
 
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var filter = require('gulp-filter');
-var mainBowerFiles = require('main-bower-files');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-var del = require('del');
-var runSequence = require('run-sequence');
-var replace = require('gulp-replace');
-var sourcemaps = require('gulp-sourcemaps');
-var cleanCSS = require('gulp-clean-css');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const filter = require('gulp-filter');
+const mainBowerFiles = require('main-bower-files');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const del = require('del');
+const runSequence = require('run-sequence');
+const replace = require('gulp-replace');
+const sourcemaps = require('gulp-sourcemaps');
+const cleanCSS = require('gulp-clean-css');
 const gulpPlumber = require('gulp-plumber');
-var isBuild = false;
 
 gulp.paths = {
   dist: 'dist',
@@ -51,7 +50,11 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(cleanCSS())
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('.'))
+    .pipe(rename({
+      basename: "core-ui-material",
+      suffix: '.min'
+    }))
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
 });
@@ -110,8 +113,7 @@ gulp.task('replace:bower', function () {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('build:dist', function (callback) {
-  isBuild = true;
+gulp.task('p', function (callback) {
   runSequence('clean:dist', 'copy:bower', 'copy:css', 'copy:img', 'copy:fonts', 'copy:js', 'copy:html', 'replace:bower', callback);
 });
 
