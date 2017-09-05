@@ -15,6 +15,7 @@
     color: $input-focus-color;
     background-color: $input-focus-bg;
     border-color: $input-focus-border-color;
+    background-size:100% 2px, 100% 1px;
     outline: none;
     @include box-shadow($input-focus-box-shadow);
   }

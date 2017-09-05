@@ -17,10 +17,21 @@
   // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
   background-image: none;
   background-clip: padding-box;
-  border: $input-btn-border-width solid $input-border-color;
-
-
-
+  // milkmidi
+  // border: $input-btn-border-width solid $input-border-color;
+  border: 0;
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 1rem;
+  height: 2.25rem;
+  line-height: 1.25rem;
+  padding: 0.5rem 0 0.4375rem;
+  background-image: linear-gradient(#8ad4ee, #8ad4ee), linear-gradient(#D2D2D2, #D2D2D2);
+  background-size: 0 2px, 100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom, center calc(100% - 1px);
+  background-color: transparent;
+  transition: background 0.1s ease-out;
+  //
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
   @if $enable-rounded {
     // Manually use the if/else instead of the mixin to account for iOS override
@@ -31,7 +42,8 @@
   }
 
   @include box-shadow($input-box-shadow);
-  @include transition($input-transition);
+  // @include transition($input-transition);
+  // transition: background 0s ease-out;
 
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
