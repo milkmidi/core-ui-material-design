@@ -7,6 +7,8 @@
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.7.0",
+    "gulp-ejs": "^3.0.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-sourcemaps": "^2.6.1"
   },
   "devDependencies": {

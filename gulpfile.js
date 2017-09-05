@@ -14,6 +14,7 @@ const replace = require('gulp-replace');
 const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
 const gulpPlumber = require('gulp-plumber');
+const ejs = require("gulp-ejs");
 
 gulp.paths = {
   dist: 'dist',
@@ -24,44 +25,33 @@ var paths = gulp.paths;
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function () {
   browserSync.init({
-    server: "./",
+    server: "./dist",
     open: false
   });
 
-  gulp.watch('scss/**/*.scss', ['sass']);
-  gulp.watch('**/*.html').on('change', browserSync.reload);
-  gulp.watch('js/**/*.js').on('change', browserSync.reload);
+  gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch('src/html/*.ejs' , ['html']);
+  // gulp.watch('src/**/*.html').on('change', browserSync.reload);
+  // gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
 
 });
 
-// Static Server without watching scss files
-gulp.task('serve:lite', function () {
-  browserSync.init({
-    server: "./"
-  });
-  gulp.watch('**/*.css').on('change', browserSync.reload);
-  gulp.watch('**/*.html').on('change', browserSync.reload);
-  gulp.watch('js/**/*.js').on('change', browserSync.reload);
-});
 
 gulp.task('sass', function () {
-  return gulp.src('./scss/style.scss')
+  return gulp.src('src/scss/style.scss')
     .pipe(gulpPlumber())
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(cleanCSS())
-    .pipe(sourcemaps.write('.'))
     .pipe(rename({
       basename: "core-ui-material",
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./css'))
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(cleanCSS())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());
 });
 
-gulp.task('sass:watch', function () {
-  gulp.watch('./scss/**/*.scss');
-});
 
 gulp.task('clean:dist', function () {
   return del(paths.dist);
@@ -77,30 +67,52 @@ gulp.task('copy:bower', function () {
     .pipe(gulp.dest(paths.dist + '/js/libs'));
 });
 
-gulp.task('copy:css', function () {
-  gulp.src('./css/**/*')
-    .pipe(gulp.dest(paths.dist + '/css'));
+gulp.task('css', function () {
+  return gulp.src('src/css/**/*')
+    .pipe(gulp.dest('./dist/css'))
+    .on('end',()=>{
+      browserSync.reload();
+    })
 });
 
-gulp.task('copy:img', function () {
-  return gulp.src('./img/**/*')
-    .pipe(gulp.dest(paths.dist + '/img'));
+gulp.task('img', function () {
+  return gulp.src('src/img/**/*')
+    .pipe(gulp.dest('./dist/img'))
+    .on('end',()=>{
+      browserSync.reload();
+    })
 });
 
-gulp.task('copy:fonts', function () {
-  return gulp.src('./fonts/**/*')
-    .pipe(gulp.dest(paths.dist + '/fonts'));
+gulp.task('fonts', function () {
+  return gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('./dist/fonts'))
+    .on('end',()=>{
+      browserSync.reload();
+    })
 });
 
-gulp.task('copy:js', function () {
-  return gulp.src('./js/**/*')
-    .pipe(gulp.dest(paths.dist + '/js'));
+gulp.task('js', function () {
+  return gulp.src('src/js/**/*')
+    .pipe(gulp.dest('./dist/js'))
+    .on('end',()=>{
+      browserSync.reload();
+    })
 });
 
-gulp.task('copy:html', function () {
-  return gulp.src('./**/*.html')
-    .pipe(gulp.dest(paths.dist + '/'));
+gulp.task('html', function (){
+  let data = {};
+  let options = {};
+  let settings = {
+      ext: '.html'
+  };
+  return gulp.src('src/html/*.ejs')
+    .pipe(ejs(data, options, settings).on('error', console.log))
+    .pipe(gulp.dest('./dist'))
+    .on('end',()=>{
+      browserSync.reload();
+    })
 });
+
 
 gulp.task('replace:bower', function () {
   return gulp.src([
@@ -113,8 +125,25 @@ gulp.task('replace:bower', function () {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('p', function (callback) {
-  runSequence('clean:dist', 'copy:bower', 'copy:css', 'copy:img', 'copy:fonts', 'copy:js', 'copy:html', 'replace:bower', callback);
+gulp.task('vendor', () => {
+  const VENDOR_ARR = [
+    'bower_components/jquery/dist/jquery.min.js',
+    'bower_components/popper.js/index.js',
+    'bower_components/bootstrap/dist/js/bootstrap.min.js',
+    'bower_components/pace/pace.min.js',
+    'bower_components/chart.js/dist/Chart.min.js',
+  ];
+  return gulp.src(VENDOR_ARR)
+        .pipe(concat('vender.js', { newLine: ';\n\n' }))
+        .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('default', ['serve']);
+
+// gulp.task
+
+gulp.task('p', function (callback) {
+  runSequence('clean:dist', 'copy:bower', 'copy:css', 'copy:img', 'copy:fonts', 'copy:js', 'copy:html', callback);
+});
+
+gulp.task('d', (cb)=> runSequence('html','css','js','fonts','sass','img', () => cb()) );
+gulp.task('default', ['d','serve']);
