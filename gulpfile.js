@@ -141,9 +141,9 @@ gulp.task('vendor', () => {
 
 // gulp.task
 
-gulp.task('p', function (callback) {
-  runSequence('clean:dist', 'copy:bower', 'copy:css', 'copy:img', 'copy:fonts', 'copy:js', 'copy:html', callback);
-});
+const defaultTasks = ['html', 'css', 'js', 'fonts', 'sass', 'img'];
 
-gulp.task('d', (cb)=> runSequence('html','css','js','fonts','sass','img', () => cb()) );
+gulp.task('p', (cb)=> runSequence.apply(null ,['clean:dist',...defaultTasks, ()=> cb()] ));
+
+gulp.task('d', (cb)=> runSequence.apply(null ,[ ...defaultTasks ,()=> cb()]  ));
 gulp.task('default', ['d','serve']);
