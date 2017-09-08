@@ -31,10 +31,11 @@
 }
 
 .card-header {
+  background-color:initial;
   // margin: -20px 15px 0;
   // border-radius: 3px;
   // padding: 15px;
-  @extend %shadow;
+  // @extend %shadow;
   // background-color: #e3e3e3;
   // background-color: darken(#e3e3e3, 1%);
   // background: linear-gradient(60deg,#c2cfd6,#c2cfee);
