@@ -73,8 +73,13 @@
   line-height: $input-btn-line-height;
   color: $input-color;
   text-align: center;
-  background-color: $input-group-addon-bg;
-  border: $input-btn-border-width solid $input-group-addon-border-color;
+
+  background-color: #F3F2EE;
+  border: 1px solid #e8e7e3;
+  border-radius: 4px;
+  
+  // background-color: $input-group-addon-bg;
+  // border: $input-btn-border-width solid $input-group-addon-border-color;
   @include border-radius($input-border-radius);
 
   // Sizing
@@ -100,6 +105,7 @@
 }
 
 
+
 //
 // Reset rounded corners
 //
@@ -110,10 +116,12 @@
 .input-group-btn:not(:last-child) > .btn-group > .btn,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {  
+  margin: 0;
   @include border-right-radius(0);
+  // background-color:red !important;
 }
-.input-group-addon:not(:last-child) {
+.input-group-addon:not(:last-child) {  
   border-right: 0;
 }
 .input-group .form-control:not(:first-child),
@@ -123,6 +131,7 @@
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn {
+  margin: 0;
   @include border-left-radius(0);
 }
 .form-control + .input-group-addon:not(:first-child) {

@@ -8,10 +8,8 @@
 //    }
 //  }
 //  @else {
-// scss-lint:disable Indentation
-    &:hover { @content }
-// scss-lint:enable Indentation
-//  }
+  // scss-lint:disable Indentation
+  &:hover { @content }
 }
 
 

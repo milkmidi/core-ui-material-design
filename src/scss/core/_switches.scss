@@ -13,7 +13,11 @@
 
   .switch-input:checked ~ .switch-handle {
     left: $width - $height + $handle-margin;
-  }
+    &:hover{
+      width: $height - $handle-margin * 2 + 2;
+      left: $width - $height + $handle-margin - 2;
+    }
+  }  
 }
 
 @mixin switch($type, $width, $height, $font-size, $handle-margin) {
@@ -73,10 +77,7 @@
       content: attr(data-on);
       opacity: 0;
     }
-  }
-  .switch-input:checked ~ .switch-label {
-    //background: $gray-lightest;
-  }
+  }  
   .switch-input:checked ~ .switch-label::before {
     opacity: 0;
   }
@@ -93,15 +94,25 @@
     background: #fff;
     border: 1px solid $border-color;
     border-radius: 1px;
-    transition: left .15s ease-out;
+    transition: left .15s ease-out, width .15s ease-out;
     @if $type == ddd {
       border: 0;
       box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
     }
   }
+  .switch-input ~ .switch-handle {
+    &:hover{
+      width: $height - $handle-margin * 2 + 2;
+    }
+  }
+
 
   .switch-input:checked ~ .switch-handle {
     left: $width - $height + $handle-margin;
+    &:hover{
+      width: $height - $handle-margin * 2 + 2;
+      left: $width - $height + $handle-margin - 2;
+    }
   }
 
 

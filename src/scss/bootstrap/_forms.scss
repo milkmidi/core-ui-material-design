@@ -17,33 +17,32 @@
   // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
   background-image: none;
   background-clip: padding-box;
-  // milkmidi
   // border: $input-btn-border-width solid $input-border-color;
-  border: 0;
-  // border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  font-size: 1rem;
-  height: 2.25rem;
-  line-height: 1.25rem;
-  padding: 0.5rem 0 0.4375rem;
-  background-image: linear-gradient(#8ad4ee, #8ad4ee), linear-gradient(#D2D2D2, #D2D2D2);
-  background-size: 0 2px, 100% 1px;
-  background-repeat: no-repeat;
-  background-position: center bottom, center calc(100% - 1px);
-  background-color: transparent;
-  transition: background 0.1s ease-out;
-  //
+
+  // milkmidi
+  border-radius: 4px;
+  color: #66615b;
+  background-color: #F3F2EE;
+  border: 1px solid #e8e7e3;
+  border-radius: 4px;
+  color: #66615b;
+  // font-size: 14px;
+  padding: 7px 18px;
+  height: 40px;
+
+
+
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-  @if $enable-rounded {
+  /* @if $enable-rounded {
     // Manually use the if/else instead of the mixin to account for iOS override
     border-radius: $input-border-radius;
   } @else {
     // Otherwise undo the iOS default
     border-radius: 0;
-  }
+  } */
 
   @include box-shadow($input-box-shadow);
-  // @include transition($input-transition);
-  // transition: background 0s ease-out;
+  @include transition($input-transition);
 
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
@@ -56,7 +55,9 @@
 
   // Placeholder
   &::placeholder {
-    color: $input-placeholder-color;
+    // color: $input-placeholder-color;
+    color: #bbbbbb;
+
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
   }
@@ -68,12 +69,12 @@
   // don't honor that edge case; we style them as disabled anyway.
   &:disabled,
   &[readonly] {
-    background-color: $input-disabled-bg;
+    // background-color: $input-disabled-bg;
+    background-color: $light-gray;
+    cursor: not-allowed;
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
   }
-
- 
 }
 
 select.form-control {
@@ -87,9 +88,9 @@ select.form-control {
     // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
     // match the appearance of the native widget.
     // See https://github.com/twbs/bootstrap/issues/19398.
-    // color: $input-color;
-    color: red;
+    color: $input-color;
     background-color: $input-bg;
+    // color: red;
   }
 }
 
@@ -202,34 +203,6 @@ select.form-control-lg {
 
 .form-group {
   margin-bottom: $form-group-margin-bottom;
-  &.label-floating {
-    padding-bottom: 10px;
-    margin: 20px 0 10px 0;
-    position: relative;
-    label{
-      margin: 16px 0 0 0;
-      position: absolute;
-      pointer-events: none;
-      top: -7px;
-      font-size: 14px;
-      line-height: 1.42857;
-      transition: 0.3s ease all;
-    }
-
-    .form-control {
-      height: 36px;
-      padding: 7px 0;
-      font-size: 14px;
-      line-height: 1.42857;
-      border: 0;
-      border-bottom: 1px solid rgba(0,0,0,.12);
-      border-radius: 0;
-
-      &:focus + label{
-        margin: 0;
-      }
-    }
-  }
 }
 
 .form-text {

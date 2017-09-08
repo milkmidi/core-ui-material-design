@@ -9,7 +9,9 @@
     "gulp-clean-css": "^3.7.0",
     "gulp-ejs": "^3.0.1",
     "gulp-plumber": "^1.1.0",
-    "gulp-sourcemaps": "^2.6.1"
+    "gulp-pug": "^3.3.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
     "browser-sync": "^2.16.0",
