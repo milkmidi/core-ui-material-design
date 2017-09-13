@@ -41,7 +41,7 @@ gulp.task('sass', function () {
   return gulp.src('src/scss/style.scss')
     .pipe(gulpPlumber())
     .pipe(rename({
-      basename: "core-ui-material",
+      basename: "core-ui-custom",
       suffix: '.min'
     }))
     .pipe(sourcemaps.init())
