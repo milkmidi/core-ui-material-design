@@ -1,0 +1,30 @@
+.pagination {
+}
+
+.page-item {
+  &:last-child,
+  &:first-child {
+    .page-link {
+      border-radius: 20px;
+    }
+  }
+  &.active .page-link {
+
+  }
+
+  &.disabled .page-link {
+
+  }
+}
+
+.page-link {
+  color:#66615B;
+  border-radius: 20px;
+  border: 2px solid #66615B;
+ 
+  &:hover{
+    color:white;
+    background-color:#66615B;
+    border: 2px solid #66615B;
+  }
+}

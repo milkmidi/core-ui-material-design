@@ -1,0 +1,29 @@
+.btn-group{
+  >.btn{
+    border: 2px solid #66615B;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px 18px;
+    color: #66615B;
+    border-radius: 20px;
+    margin-left: -2px;
+    &:hover, 
+    &.active {
+      color:white;
+      background-color:#66615B;
+      border: 2px solid #66615B;
+    }
+    &:first-child:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right-width:0
+    }
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left-width: 0;
+    }
+  }
+ 
+}
