@@ -1,0 +1,605 @@
+extends _master.pug
+block content
+  .container-fluid
+    .animated.fadeIn
+      .row
+        .col-sm-6.col-lg-3
+          .card.text-white.bg-primary
+            .card-body.pb-0
+              .btn-group.float-right
+                button.btn.btn-transparent.dropdown-toggle.p-0(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  i.icon-settings
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item(href='#') Action
+                  a.dropdown-item(href='#') Another action
+                  a.dropdown-item(href='#') Something else here
+              h4.mb-0 9.823
+              p Members online
+            .chart-wrapper.px-3(style='height:70px;')
+              canvas#card-chart1.chart(height='70')
+        // /.col
+        .col-sm-6.col-lg-3
+          .card.text-white.bg-info
+            .card-body.pb-0
+              button.btn.btn-transparent.p-0.float-right(type='button')
+                i.icon-location-pin
+              h4.mb-0 9.823
+              p Members online
+            .chart-wrapper.px-3(style='height:70px;')
+              canvas#card-chart2.chart(height='70')
+        // /.col
+        .col-sm-6.col-lg-3
+          .card.text-white.bg-warning
+            .card-body.pb-0
+              .btn-group.float-right
+                button.btn.btn-transparent.dropdown-toggle.p-0(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  i.icon-settings
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item(href='#') Action
+                  a.dropdown-item(href='#') Another action
+                  a.dropdown-item(href='#') Something else here
+              h4.mb-0 9.823
+              p Members online
+            .chart-wrapper(style='height:70px;')
+              canvas#card-chart3.chart(height='70')
+        // /.col
+        .col-sm-6.col-lg-3
+          .card.text-white.bg-danger
+            .card-body.pb-0
+              .btn-group.float-right
+                button.btn.btn-transparent.dropdown-toggle.p-0(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  i.icon-settings
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item(href='#') Action
+                  a.dropdown-item(href='#') Another action
+                  a.dropdown-item(href='#') Something else here
+              h4.mb-0 9.823
+              p Members online
+            .chart-wrapper.px-3(style='height:70px;')
+              canvas#card-chart4.chart(height='70')
+        // /.col
+      // /.row
+      .card
+        .card-body
+          .row
+            .col-sm-5
+              h4.card-title.mb-0 Traffic
+              .small.text-muted November 2015
+            // /.col
+            .col-sm-7.hidden-sm-down
+              button.btn.btn-primary.float-right(type='button')
+                i.icon-cloud-download
+              .btn-toolbar.float-right(role='toolbar', aria-label='Toolbar with button groups')
+                .btn-group.mr-3(data-toggle='buttons', aria-label='First group')
+                  label.btn.btn-outline-secondary
+                    input#option1(type='radio', name='options')
+                    | Day
+                  label.btn.btn-outline-secondary.active
+                    input#option2(type='radio', name='options', checked='')
+                    | Month
+                  label.btn.btn-outline-secondary
+                    input#option3(type='radio', name='options')
+                    | Year
+            // /.col
+          // /.row
+          .chart-wrapper(style='height:300px;margin-top:40px;')
+            canvas#main-chart.chart(height='300')
+        .card-footer
+          ul
+            li
+              .text-muted Visits
+              strong 29.703 Users (40%)
+              .progress.progress-xs.mt-2
+                .progress-bar.bg-success(role='progressbar', style='width: 40%', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100')
+            li.hidden-sm-down
+              .text-muted Unique
+              strong 24.093 Users (20%)
+              .progress.progress-xs.mt-2
+                .progress-bar.bg-info(role='progressbar', style='width: 20%', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100')
+            li
+              .text-muted Pageviews
+              strong 78.706 Views (60%)
+              .progress.progress-xs.mt-2
+                .progress-bar.bg-warning(role='progressbar', style='width: 60%', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100')
+            li.hidden-sm-down
+              .text-muted New Users
+              strong 22.123 Users (80%)
+              .progress.progress-xs.mt-2
+                .progress-bar.bg-danger(role='progressbar', style='width: 80%', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
+            li.hidden-sm-down
+              .text-muted Bounce Rate
+              strong 40.15%
+              .progress.progress-xs.mt-2
+                .progress-bar(role='progressbar', style='width: 40%', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100')
+      // /.card
+      .row
+        .col-sm-6.col-lg-3
+          .social-box.facebook
+            i.fa.fa-facebook
+            .chart-wrapper
+              canvas#social-box-chart-1(height='90')
+            ul
+              li
+                strong 89k
+                span friends
+              li
+                strong 459
+                span feeds
+          // /.social-box
+        // /.col
+        .col-sm-6.col-lg-3
+          .social-box.twitter
+            i.fa.fa-twitter
+            .chart-wrapper
+              canvas#social-box-chart-2(height='90')
+            ul
+              li
+                strong 973k
+                span followers
+              li
+                strong 1.792
+                span tweets
+          // /.social-box
+        // /.col
+        .col-sm-6.col-lg-3
+          .social-box.linkedin
+            i.fa.fa-linkedin
+            .chart-wrapper
+              canvas#social-box-chart-3(height='90')
+            ul
+              li
+                strong 500+
+                span contacts
+              li
+                strong 292
+                span feeds
+          // /.social-box
+        // /.col
+        .col-sm-6.col-lg-3
+          .social-box.google-plus
+            i.fa.fa-google-plus
+            .chart-wrapper
+              canvas#social-box-chart-4(height='90')
+            ul
+              li
+                strong 894
+                span followers
+              li
+                strong 92
+                span circles
+          // /.social-box
+        // /.col
+      // /.row
+      .row
+        .col-md-12
+          .card
+            .card-header
+              | Traffic & Sales
+            .card-body
+              .row
+                .col-sm-12.col-lg-4
+                  .row
+                    .col-sm-6
+                      .callout.callout-info
+                        small.text-muted New Clients
+                        br
+                        strong.h4 9,123
+                        .chart-wrapper
+                          canvas#sparkline-chart-1(width='100', height='30')
+                    // /.col
+                    .col-sm-6
+                      .callout.callout-danger
+                        small.text-muted Recuring Clients
+                        br
+                        strong.h4 22,643
+                        .chart-wrapper
+                          canvas#sparkline-chart-2(width='100', height='30')
+                    // /.col
+                  // /.row
+                  hr.mt-0
+                  ul.horizontal-bars
+                    li
+                      .title
+                        | Monday
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-info(role='progressbar', style='width: 34%', aria-valuenow='34', aria-valuemin='0', aria-valuemax='100')
+                        .progress.progress-xs
+                          .progress-bar.bg-danger(role='progressbar', style='width: 78%', aria-valuenow='78', aria-valuemin='0', aria-valuemax='100')
+                    li
+                      .title
+                        | Tuesday
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-info(role='progressbar', style='width: 56%', aria-valuenow='56', aria-valuemin='0', aria-valuemax='100')
+                        .progress.progress-xs
+                          .progress-bar.bg-danger(role='progressbar', style='width: 94%', aria-valuenow='94', aria-valuemin='0', aria-valuemax='100')
+                    li
+                      .title
+                        | Wednesday
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-info(role='progressbar', style='width: 12%', aria-valuenow='12', aria-valuemin='0', aria-valuemax='100')
+                        .progress.progress-xs
+                          .progress-bar.bg-danger(role='progressbar', style='width: 67%', aria-valuenow='67', aria-valuemin='0', aria-valuemax='100')
+                    li
+                      .title
+                        | Thursday
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-info(role='progressbar', style='width: 43%', aria-valuenow='43', aria-valuemin='0', aria-valuemax='100')
+                        .progress.progress-xs
+                          .progress-bar.bg-danger(role='progressbar', style='width: 91%', aria-valuenow='91', aria-valuemin='0', aria-valuemax='100')
+                    li
+                      .title
+                        | Friday
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-info(role='progressbar', style='width: 22%', aria-valuenow='22', aria-valuemin='0', aria-valuemax='100')
+                        .progress.progress-xs
+                          .progress-bar.bg-danger(role='progressbar', style='width: 73%', aria-valuenow='73', aria-valuemin='0', aria-valuemax='100')
+                    li
+                      .title
+                        | Saturday
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-info(role='progressbar', style='width: 53%', aria-valuenow='53', aria-valuemin='0', aria-valuemax='100')
+                        .progress.progress-xs
+                          .progress-bar.bg-danger(role='progressbar', style='width: 82%', aria-valuenow='82', aria-valuemin='0', aria-valuemax='100')
+                    li
+                      .title
+                        | Sunday
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-info(role='progressbar', style='width: 9%', aria-valuenow='9', aria-valuemin='0', aria-valuemax='100')
+                        .progress.progress-xs
+                          .progress-bar.bg-danger(role='progressbar', style='width: 69%', aria-valuenow='69', aria-valuemin='0', aria-valuemax='100')
+                    li.legend
+                      span.badge.badge-pill.badge-info
+                      small New clients
+                      span.badge.badge-pill.badge-danger
+                      small Recurring clients
+                // /.col
+                .col-sm-6.col-lg-4
+                  .row
+                    .col-sm-6
+                      .callout.callout-warning
+                        small.text-muted Pageviews
+                        br
+                        strong.h4 78,623
+                        .chart-wrapper
+                          canvas#sparkline-chart-3(width='100', height='30')
+                    // /.col
+                    .col-sm-6
+                      .callout.callout-success
+                        small.text-muted Organic
+                        br
+                        strong.h4 49,123
+                        .chart-wrapper
+                          canvas#sparkline-chart-4(width='100', height='30')
+                    // /.col
+                  // /.row
+                  hr.mt-0
+                  ul.horizontal-bars.type-2
+                    li
+                      i.icon-user
+                      span.title Male
+                      span.value 43%
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-warning(role='progressbar', style='width: 43%', aria-valuenow='43', aria-valuemin='0', aria-valuemax='100')
+                    li
+                      i.icon-user-female
+                      span.title Female
+                      span.value 37%
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-warning(role='progressbar', style='width: 37%', aria-valuenow='37', aria-valuemin='0', aria-valuemax='100')
+                    li.divider
+                    li
+                      i.icon-globe
+                      span.title Organic Search
+                      span.value
+                        | 191,235
+                        span.text-muted.small (56%)
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-success(role='progressbar', style='width: 56%', aria-valuenow='56', aria-valuemin='0', aria-valuemax='100')
+                    li
+                      i.icon-social-facebook
+                      span.title Facebook
+                      span.value
+                        | 51,223
+                        span.text-muted.small (15%)
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-success(role='progressbar', style='width: 15%', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100')
+                    li
+                      i.icon-social-twitter
+                      span.title Twitter
+                      span.value
+                        | 37,564
+                        span.text-muted.small (11%)
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-success(role='progressbar', style='width: 11%', aria-valuenow='11', aria-valuemin='0', aria-valuemax='100')
+                    li
+                      i.icon-social-linkedin
+                      span.title LinkedIn
+                      span.value
+                        | 27,319
+                        span.text-muted.small (8%)
+                      .bars
+                        .progress.progress-xs
+                          .progress-bar.bg-success(role='progressbar', style='width: 8%', aria-valuenow='8', aria-valuemin='0', aria-valuemax='100')
+                    li.divider.text-center
+                      button.btn.btn-sm.btn-link.text-muted(type='button', data-toggle='tooltip', data-placement='top', title='', data-original-title='show more')
+                        i.icon-options
+                // /.col
+                .col-sm-6.col-lg-4
+                  .row
+                    .col-sm-6
+                      .callout
+                        small.text-muted CTR
+                        br
+                        strong.h4 23%
+                        .chart-wrapper
+                          canvas#sparkline-chart-5(width='100', height='30')
+                    // /.col
+                    .col-sm-6
+                      .callout.callout-primary
+                        small.text-muted Bounce Rate
+                        br
+                        strong.h4 5%
+                        .chart-wrapper
+                          canvas#sparkline-chart-6(width='100', height='30')
+                    // /.col
+                  // /.row
+                  hr.mt-0
+                  ul.icons-list
+                    li
+                      i.icon-screen-desktop.bg-primary
+                      .desc
+                        .title iMac 4k
+                        small Lorem ipsum dolor sit amet
+                      .value
+                        .small.text-muted Sold this week
+                        strong 1.924
+                      .actions
+                        button.btn.btn-link.text-muted(type='button')
+                          i.icon-settings
+                    li
+                      i.icon-screen-smartphone.bg-info
+                      .desc
+                        .title Samsung Galaxy Edge
+                        small Lorem ipsum dolor sit amet
+                      .value
+                        .small.text-muted Sold this week
+                        strong 1.224
+                      .actions
+                        button.btn.btn-link.text-muted(type='button')
+                          i.icon-settings
+                    li
+                      i.icon-screen-smartphone.bg-warning
+                      .desc
+                        .title iPhone 6S
+                        small Lorem ipsum dolor sit amet
+                      .value
+                        .small.text-muted Sold this week
+                        strong 1.163
+                      .actions
+                        button.btn.btn-link.text-muted(type='button')
+                          i.icon-settings
+                    li
+                      i.icon-user.bg-danger
+                      .desc
+                        .title Premium accounts
+                        small Lorem ipsum dolor sit amet
+                      .value
+                        .small.text-muted Sold this week
+                        strong 928
+                      .actions
+                        button.btn.btn-link.text-muted(type='button')
+                          i.icon-settings
+                    li
+                      i.icon-social-spotify.bg-success
+                      .desc
+                        .title Spotify Subscriptions
+                        small Lorem ipsum dolor sit amet
+                      .value
+                        .small.text-muted Sold this week
+                        strong 893
+                      .actions
+                        button.btn.btn-link.text-muted(type='button')
+                          i.icon-settings
+                    li
+                      i.icon-cloud-download.bg-danger
+                      .desc
+                        .title Ebook
+                        small Lorem ipsum dolor sit amet
+                      .value
+                        .small.text-muted Downloads
+                        strong 121.924
+                      .actions
+                        button.btn.btn-link.text-muted(type='button')
+                          i.icon-settings
+                    li
+                      i.icon-camera.bg-warning
+                      .desc
+                        .title Photos
+                        small Lorem ipsum dolor sit amet
+                      .value
+                        .small.text-muted Uploaded
+                        strong 12.125
+                      .actions
+                        button.btn.btn-link.text-muted(type='button')
+                          i.icon-settings
+                    li.divider.text-center
+                      button.btn.btn-sm.btn-link.text-muted(type='button', data-toggle='tooltip', data-placement='top', title='show more')
+                        i.icon-options
+                // /.col
+              // /.row
+              br
+              table.table.table-responsive.table-hover.table-outline.mb-0
+                thead.thead-default
+                  tr
+                    th.text-center
+                      i.icon-people
+                    th User
+                    th.text-center Country
+                    th Usage
+                    th.text-center Payment Method
+                    th Activity
+                tbody
+                  tr
+                    td.text-center
+                      .avatar
+                        img.img-avatar(src='img/avatars/1.jpg', alt='admin@bootstrapmaster.com')
+                        span.avatar-status.badge-success
+                    td
+                      div Yiorgos Avraamu
+                      .small.text-muted
+                        span New
+                        | | Registered: Jan 1, 2015
+                    td.text-center
+                      img(src='img/flags/USA.png', alt='USA', style='height:24px;')
+                    td
+                      .clearfix
+                        .float-left
+                          strong 50%
+                        .float-right
+                          small.text-muted Jun 11, 2015 - Jul 10, 2015
+                      .progress.progress-xs
+                        .progress-bar.bg-success(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                    td.text-center
+                      i.fa.fa-cc-mastercard(style='font-size:24px')
+                    td
+                      .small.text-muted Last login
+                      strong 10 sec ago
+                  tr
+                    td.text-center
+                      .avatar
+                        img.img-avatar(src='img/avatars/2.jpg', alt='admin@bootstrapmaster.com')
+                        span.avatar-status.badge-danger
+                    td
+                      div Avram Tarasios
+                      .small.text-muted
+                        span Recurring
+                        | | Registered: Jan 1, 2015
+                    td.text-center
+                      img(src='img/flags/Brazil.png', alt='Brazil', style='height:24px;')
+                    td
+                      .clearfix
+                        .float-left
+                          strong 10%
+                        .float-right
+                          small.text-muted Jun 11, 2015 - Jul 10, 2015
+                      .progress.progress-xs
+                        .progress-bar.bg-info(role='progressbar', style='width: 10%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                    td.text-center
+                      i.fa.fa-cc-visa(style='font-size:24px')
+                    td
+                      .small.text-muted Last login
+                      strong 5 minutes ago
+                  tr
+                    td.text-center
+                      .avatar
+                        img.img-avatar(src='img/avatars/3.jpg', alt='admin@bootstrapmaster.com')
+                        span.avatar-status.badge-warning
+                    td
+                      div Quintin Ed
+                      .small.text-muted
+                        span New
+                        | | Registered: Jan 1, 2015
+                    td.text-center
+                      img(src='img/flags/India.png', alt='India', style='height:24px;')
+                    td
+                      .clearfix
+                        .float-left
+                          strong 74%
+                        .float-right
+                          small.text-muted Jun 11, 2015 - Jul 10, 2015
+                      .progress.progress-xs
+                        .progress-bar.bg-warning(role='progressbar', style='width: 74%', aria-valuenow='74', aria-valuemin='0', aria-valuemax='100')
+                    td.text-center
+                      i.fa.fa-cc-stripe(style='font-size:24px')
+                    td
+                      .small.text-muted Last login
+                      strong 1 hour ago
+                  tr
+                    td.text-center
+                      .avatar
+                        img.img-avatar(src='img/avatars/4.jpg', alt='admin@bootstrapmaster.com')
+                        span.avatar-status.badge-default
+                    td
+                      div Enéas Kwadwo
+                      .small.text-muted
+                        span New
+                        | | Registered: Jan 1, 2015
+                    td.text-center
+                      img(src='img/flags/France.png', alt='France', style='height:24px;')
+                    td
+                      .clearfix
+                        .float-left
+                          strong 98%
+                        .float-right
+                          small.text-muted Jun 11, 2015 - Jul 10, 2015
+                      .progress.progress-xs
+                        .progress-bar.bg-danger(role='progressbar', style='width: 98%', aria-valuenow='98', aria-valuemin='0', aria-valuemax='100')
+                    td.text-center
+                      i.fa.fa-paypal(style='font-size:24px')
+                    td
+                      .small.text-muted Last login
+                      strong Last month
+                  tr
+                    td.text-center
+                      .avatar
+                        img.img-avatar(src='img/avatars/5.jpg', alt='admin@bootstrapmaster.com')
+                        span.avatar-status.badge-success
+                    td
+                      div Agapetus Tadeáš
+                      .small.text-muted
+                        span New
+                        | | Registered: Jan 1, 2015
+                    td.text-center
+                      img(src='img/flags/Spain.png', alt='Spain', style='height:24px;')
+                    td
+                      .clearfix
+                        .float-left
+                          strong 22%
+                        .float-right
+                          small.text-muted Jun 11, 2015 - Jul 10, 2015
+                      .progress.progress-xs
+                        .progress-bar.bg-info(role='progressbar', style='width: 22%', aria-valuenow='22', aria-valuemin='0', aria-valuemax='100')
+                    td.text-center
+                      i.fa.fa-google-wallet(style='font-size:24px')
+                    td
+                      .small.text-muted Last login
+                      strong Last week
+                  tr
+                    td.text-center
+                      .avatar
+                        img.img-avatar(src='img/avatars/6.jpg', alt='admin@bootstrapmaster.com')
+                        span.avatar-status.badge-danger
+                    td
+                      div Friderik Dávid
+                      .small.text-muted
+                        span New
+                        | | Registered: Jan 1, 2015
+                    td.text-center
+                      img(src='img/flags/Poland.png', alt='Poland', style='height:24px;')
+                    td
+                      .clearfix
+                        .float-left
+                          strong 43%
+                        .float-right
+                          small.text-muted Jun 11, 2015 - Jul 10, 2015
+                      .progress.progress-xs
+                        .progress-bar.bg-success(role='progressbar', style='width: 43%', aria-valuenow='43', aria-valuemin='0', aria-valuemax='100')
+                    td.text-center
+                      i.fa.fa-cc-amex(style='font-size:24px')
+                    td
+                      .small.text-muted Last login
+                      strong Yesterday
+        // /.col
+      // /.row

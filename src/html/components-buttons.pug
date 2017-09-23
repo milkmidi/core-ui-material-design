@@ -1,0 +1,271 @@
+extends _master.pug
+block content    
+  .container-fluid
+    .animated.fadeIn
+      .row
+        .col-md-6
+
+          .card
+            .card-header
+              .card-title
+                h4 Options
+            .card-body
+              button.btn.btn-primary(type='button') Primary
+              button.btn.btn-secondary(type='button') Secondary
+              button.btn.btn-success(type='button') Success
+              button.btn.btn-warning(type='button') Warning
+              button.btn.btn-info(type='button') Info
+              button.btn.btn-danger(type='button') Danger
+              button.btn.btn-link(type='button') Link
+
+          .card
+            .card-header
+              strong With Icons
+            .card-body
+              button.btn.btn-primary.btn-rotate(type='button')
+                i.fa.fa-star
+                | Primary
+              button.btn.btn-secondary(type='button')
+                i.fa.fa-lightbulb-o
+                | Secondary
+              button.btn.btn-success(type='button')
+                i.fa.fa-magic
+                | Success
+              button.btn.btn-warning(type='button')
+                i.fa.fa-map-marker
+                | Warning
+              button.btn.btn-danger(type='button')
+                i.fa.fa-rss
+                | Danger
+              button.btn.btn-link(type='button')
+                i.fa.fa-link
+                | Link
+              button.btn.btn-primary.btn-move-left(type='button')
+                i.icon-arrow-left.icons
+                | Prev
+              button.btn.btn-primary.btn-move-right.btn-right-icon(type='button')
+                | Next
+                i.icon-arrow-right.icons
+          .card
+            .card-header
+              strong Round
+            .card-body
+              button.btn.btn-round.btn-primary(type='button') Primary
+              button.btn.btn-round.btn-secondary(type='button') Secondary
+              button.btn.btn-round.btn-success(type='button') Success
+              button.btn.btn-round.btn-warning(type='button') Warning
+              button.btn.btn-round.btn-info(type='button') Info
+              button.btn.btn-round.btn-danger(type='button') Danger
+              button.btn.btn-round.btn-link(type='button') Link
+          .card
+            .card-header
+              strong Size Large
+              small
+                | Add this class
+                code .btn-lg
+            .card-body
+              button.btn.btn-primary.btn-lg(type='button') Primary
+              button.btn.btn-secondary.btn-lg(type='button') Secondary
+              button.btn.btn-success.btn-lg(type='button') Success
+              button.btn.btn-info.btn-lg(type='button') Info
+              button.btn.btn-warning.btn-lg(type='button') Warning
+              button.btn.btn-danger.btn-lg(type='button') Danger
+              button.btn.btn-link.btn-lg(type='button') Link
+          .card
+            .card-header
+              strong Size Small
+              small
+                | Add this class
+                code .btn-sm
+            .card-body
+              button.btn.btn-primary.btn-sm(type='button') Primary
+              button.btn.btn-secondary.btn-sm(type='button') Secondary
+              button.btn.btn-success.btn-sm(type='button') Success
+              button.btn.btn-info.btn-sm(type='button') Info
+              button.btn.btn-warning.btn-sm(type='button') Warning
+              button.btn.btn-danger.btn-sm(type='button') Danger
+              button.btn.btn-link.btn-sm(type='button') Link
+          .card
+            .card-header
+              strong Disabled state
+              small
+                | Add this
+                code disabled="disabled"
+            .card-body
+              button.btn.btn-primary(type='button', disabled='disabled') Primary
+              button.btn.btn-secondary(type='button', disabled='disabled') Secondary
+              button.btn.btn-success(type='button', disabled='disabled') Success
+              button.btn.btn-info(type='button', disabled='disabled') Info
+              button.btn.btn-warning(type='button', disabled='disabled') Warning
+              button.btn.btn-danger(type='button', disabled='disabled') Danger
+              button.btn.btn-link(type='button', disabled='disabled') Link
+          .card
+            .card-header
+              strong Active state
+              small
+                | Add this class
+                code .active
+            .card-body
+              button.btn.btn-primary.active(type='button') Primary
+              button.btn.btn-secondary.active(type='button') Secondary
+              button.btn.btn-success.active(type='button') Success
+              button.btn.btn-info.active(type='button') Info
+              button.btn.btn-warning.active(type='button') Warning
+              button.btn.btn-danger.active(type='button') Danger
+              button.btn.btn-link.active(type='button') Link
+          .card
+            .card-header
+              strong Block Level Buttons
+              small
+                | Add this class
+                code .btn-block
+            .card-body
+              button.btn.btn-secondary.btn-lg.btn-block(type='button') Block level button
+              button.btn.btn-primary.btn-lg.btn-block(type='button') Block level button
+              button.btn.btn-success.btn-lg.btn-block(type='button') Block level button
+              button.btn.btn-info.btn-lg.btn-block(type='button') Block level button
+              button.btn.btn-warning.btn-lg.btn-block(type='button') Block level button
+              button.btn.btn-danger.btn-lg.btn-block(type='button') Block level button
+              button.btn.btn-link.btn-lg.btn-block(type='button') Block level button
+        
+        //- -----------------------------------------.col
+        .col-md-6
+          .card
+            .card-header
+              strong Options
+            .card-body
+              // Provides extra visual weight and identifies the primary action in a set of buttons
+              button.btn.btn-outline-primary(type='button') Primary
+              // Secondary, outline button
+              button.btn.btn-outline-secondary(type='button') Secondary
+              // Indicates a successful or positive action
+              button.btn.btn-outline-success(type='button') Success
+              // Indicates caution should be taken with this action
+              button.btn.btn-outline-warning(type='button') Warning
+              // Indicates a dangerous or potentially negative action
+              button.btn.btn-outline-danger(type='button') Danger
+          .card
+            .card-header
+              strong With Icons
+            .card-body
+              button.btn.btn-outline-primary(type='button')
+                i.fa.fa-star
+                | Primary
+              button.btn.btn-outline-secondary(type='button')
+                i.fa.fa-lightbulb-o
+                | Secondary
+              button.btn.btn-outline-success(type='button')
+                i.fa.fa-magic
+                | Success
+              button.btn.btn-outline-warning(type='button')
+                i.fa.fa-map-marker
+                | Warning
+              button.btn.btn-outline-danger(type='button')
+                i.fa.fa-rss
+                | Danger
+          .card
+            .card-header
+              strong Round
+            .card-body
+              button.btn.btn-round.btn-outline-primary(type='button') Primary
+              button.btn.btn-round.btn-outline-secondary(type='button') Secondary
+              button.btn.btn-round.btn-outline-success(type='button') Success
+              button.btn.btn-round.btn-outline-warning(type='button') Warning
+              button.btn.btn-round.btn-outline-info(type='button') Info
+              button.btn.btn-round.btn-outline-danger(type='button') Danger
+              button.btn.btn-round.btn-outline-link(type='button') Link
+          .card
+            .card-header
+              strong Size Large
+              small
+                | Add this class
+                code .btn-lg
+            .card-body
+              button.btn.btn-outline-primary.btn-lg(type='button') Primary
+              button.btn.btn-outline-secondary.btn-lg(type='button') Secondary
+              button.btn.btn-outline-success.btn-lg(type='button') Success
+              button.btn.btn-outline-info.btn-lg(type='button') Info
+              button.btn.btn-outline-warning.btn-lg(type='button') Warning
+              button.btn.btn-outline-danger.btn-lg(type='button') Danger
+          .card
+            .card-header
+              strong Size Small
+              small
+                | Add this class
+                code .btn-sm
+            .card-body
+              button.btn.btn-outline-primary.btn-sm(type='button') Primary
+              button.btn.btn-outline-secondary.btn-sm(type='button') Secondary
+              button.btn.btn-outline-success.btn-sm(type='button') Success
+              button.btn.btn-outline-info.btn-sm(type='button') Info
+              button.btn.btn-outline-warning.btn-sm(type='button') Warning
+              button.btn.btn-outline-danger.btn-sm(type='button') Danger
+          .card
+            .card-header
+              strong Disabled state
+              small
+                | Add this
+                code disabled="disabled"
+            .card-body
+              button.btn.btn-outline-primary(type='button', disabled='disabled') Primary
+              button.btn.btn-outline-secondary(type='button', disabled='disabled') Secondary
+              button.btn.btn-success(type='button', disabled='disabled') Success
+              button.btn.btn-outline-info(type='button', disabled='disabled') Info
+              button.btn.btn-outline-warning(type='button', disabled='disabled') Warning
+              button.btn.btn-outline-danger(type='button', disabled='disabled') Danger
+          .card
+            .card-header
+              strong Active state
+              small
+                | Add this class
+                code .active
+            .card-body
+              button.btn.btn-outline-primary.active(type='button') Primary
+              button.btn.btn-outline-secondary.active(type='button') Secondary
+              button.btn.btn-outline-success.active(type='button') Success
+              button.btn.btn-outline-info.active(type='button') Info
+              button.btn.btn-outline-warning.active(type='button') Warning
+              button.btn.btn-outline-danger.active(type='button') Danger
+          .card
+            .card-header
+              strong Block Level Buttons
+              small
+                | Add this class
+                code .btn-block
+            .card-body
+              button.btn.btn-outline-secondary.btn-lg.btn-block(type='button') Block level button
+              button.btn.btn-outline-primary.btn-lg.btn-block(type='button') Block level button
+              button.btn.btn-outline-success.btn-lg.btn-block(type='button') Block level button
+              button.btn.btn-outline-info.btn-lg.btn-block(type='button') Block level button
+              button.btn.btn-outline-warning.btn-lg.btn-block(type='button') Block level button
+              button.btn.btn-outline-danger.btn-lg.btn-block(type='button') Block level button
+          .card
+            .card-header Pagination
+            .card-body
+              nav(aria-label='Page navigation example')
+                ul.pagination
+                  li.page-item
+                    a.page-link(href='#') Previous
+                  li.page-item.active
+                    a.page-link(href='#') 1
+                  li.page-item
+                    a.page-link(href='#') 2
+                  li.page-item
+                    a.page-link(href='#') 3
+                  li.page-item
+                    a.page-link(href='#') Next
+          .card
+            .card-header Button Group
+            .card-body
+              .btn-group
+                button.btn.btn-primary(type='button') Left
+                button.btn.btn-primary(type='button') Middle
+                button.btn.btn-primary(type='button') Right
+              .btn-group
+                button.btn.btn-primary(type='button') 1
+                button.btn.btn-primary(type='button') 2
+                button.btn.btn-primary(type='button') 3
+                button.btn.btn-primary(type='button') 4
+                button.btn.btn-primary(type='button') 5
+        // /.col
+      // /.row

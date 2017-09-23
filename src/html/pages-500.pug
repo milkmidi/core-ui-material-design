@@ -1,0 +1,26 @@
+doctype html
+//
+  * CoreUI - Open Source Bootstrap Admin Template
+  * @version v1.0.0-alpha.6
+  * @link http://coreui.io
+  * Copyright (c) 2017 creativeLabs Łukasz Holeczek
+  * @license MIT
+html(lang='en')
+  head
+    include include/head
+  body.app.flex-row.align-items-center
+    .container
+      .row.justify-content-center
+        .col-md-6
+          .clearfix
+            h1.float-left.display-3.mr-4 500
+            h4.pt-3 Houston, we have a problem!
+            p.text-muted The page you are looking for is temporarily unavailable.
+          .input-prepend.input-group
+            span.input-group-addon
+              i.fa.fa-search
+            input#prependedInput.form-control(size='16', type='text', placeholder='What are you looking for?')
+            span.input-group-btn
+              button.btn.btn-info(type='button') Search
+    // Bootstrap and necessary plugins
+    script(src='js/vendor.js')

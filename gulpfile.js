@@ -14,7 +14,8 @@ const replace = require('gulp-replace');
 const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
 const gulpPlumber = require('gulp-plumber');
-const ejs = require("gulp-ejs");
+// const ejs = require("gulp-ejs");
+const pug = require('gulp-pug');
 
 gulp.paths = {
   dist: 'dist',
@@ -30,9 +31,10 @@ gulp.task('serve', ['sass'], function () {
   });
 
   gulp.watch('src/scss/**/*.scss', ['sass']);
-  gulp.watch('src/html/*.ejs' , ['html']);
+  // gulp.watch('src/html/*.ejs' , ['html']);
+  gulp.watch('src/html/**/*.pug' , ['html']);
   // gulp.watch('src/**/*.html').on('change', browserSync.reload);
-  // gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
+  gulp.watch('src/js/**/*.js',['js']);
 
 });
 
@@ -100,6 +102,23 @@ gulp.task('js', function () {
 });
 
 gulp.task('html', function (){
+  const SOURCE = [
+    'src/html/**/*.pug',
+    '!*src/html/**/_*.pug',
+    '!*src/html/include/*.pug',
+    '!*src/html/component/*.pug',
+  ];
+  const config = {
+    pretty: true
+  };
+  return gulp.src(SOURCE)
+    .pipe(pug(config).on('error', console.log))
+    .pipe(gulp.dest('./dist'))
+    .on('end',()=>{
+      browserSync.reload();
+    })
+});
+/* gulp.task('html', function (){
   let data = {};
   let options = {};
   let settings = {
@@ -111,7 +130,7 @@ gulp.task('html', function (){
     .on('end',()=>{
       browserSync.reload();
     })
-});
+}); */
 
 
 gulp.task('replace:bower', function () {

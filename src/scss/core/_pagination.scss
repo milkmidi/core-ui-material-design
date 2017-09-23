@@ -22,7 +22,8 @@
   border-radius: 20px;
   border: 2px solid #66615B;
  
-  &:hover{
+  &:focus,
+  &:hover {
     color:white;
     background-color:#66615B;
     border: 2px solid #66615B;

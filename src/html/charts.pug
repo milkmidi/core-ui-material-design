@@ -1,0 +1,63 @@
+extends _master.pug
+block content
+  .container-fluid
+    .animated.fadeIn
+      .card-columns.cols-2
+        .card
+          .card-header
+            | Line Chart
+            .card-actions
+              a(href='http://www.chartjs.org')
+                small.text-muted docs
+          .card-body
+            .chart-wrapper
+              canvas#canvas-1
+        .card
+          .card-header
+            | Bar Chart
+            .card-actions
+              a(href='http://www.chartjs.org')
+                small.text-muted docs
+          .card-body
+            .chart-wrapper
+              canvas#canvas-2
+        .card
+          .card-header
+            | Doughnut Chart
+            .card-actions
+              a(href='http://www.chartjs.org')
+                small.text-muted docs
+          .card-body
+            .chart-wrapper
+              canvas#canvas-3
+        .card
+          .card-header
+            | Radar Chart
+            .card-actions
+              a(href='http://www.chartjs.org')
+                small.text-muted docs
+          .card-body
+            .chart-wrapper
+              canvas#canvas-4
+        .card
+          .card-header
+            | Pie Chart
+            .card-actions
+              a(href='http://www.chartjs.org')
+                small.text-muted docs
+          .card-body
+            .chart-wrapper
+              canvas#canvas-5
+        .card
+          .card-header
+            | Polar Area Chart
+            .card-actions
+              a(href='http://www.chartjs.org')
+                small.text-muted docs
+          .card-body
+            .chart-wrapper
+              canvas#canvas-6
+    
+
+block script
+  <script src="js/views/charts.js"></script>

@@ -114,11 +114,11 @@ fieldset[disabled] a.btn {
 // Button Sizes
 //
 
-.btn-lg {
+.btn.btn-lg {
   @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
 }
 
-.btn-sm {
+.btn.btn-sm {
   @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
 }
 

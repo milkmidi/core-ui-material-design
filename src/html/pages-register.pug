@@ -1,0 +1,44 @@
+doctype html
+//
+  * CoreUI - Open Source Bootstrap Admin Template
+  * @version v1.0.0-alpha.6
+  * @link http://coreui.io
+  * Copyright (c) 2017 creativeLabs Łukasz Holeczek
+  * @license MIT
+html(lang='en')
+  head
+    include include/head
+  body.app.flex-row.align-items-center
+    .container
+      .row.justify-content-center
+        .col-md-6
+          .card.mx-4
+            .card-body.p-4
+              h1 Register
+              p.text-muted Create your account
+              .input-group.mb-3
+                span.input-group-addon
+                  i.icon-user
+                input.form-control(type='text', placeholder='Username')
+              .input-group.mb-3
+                span.input-group-addon @
+                input.form-control(type='text', placeholder='Email')
+              .input-group.mb-3
+                span.input-group-addon
+                  i.icon-lock
+                input.form-control(type='password', placeholder='Password')
+              .input-group.mb-4
+                span.input-group-addon
+                  i.icon-lock
+                input.form-control(type='password', placeholder='Repeat password')
+              button.btn.btn-block.btn-success(type='button') Create Account
+            .card-footer.p-4
+              .row
+                .col-6
+                  button.btn.btn-block.btn-facebook(type='button')
+                    span facebook
+                .col-6
+                  button.btn.btn-block.btn-twitter(type='button')
+                    span twitter
+    // Bootstrap and necessary plugins
+    script(src='js/vendor.js')

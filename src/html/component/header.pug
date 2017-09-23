@@ -1,0 +1,69 @@
+header.app-header.navbar
+  button.navbar-toggler.mobile-sidebar-toggler.d-lg-none.mr-auto(type='button') ☰
+  a.navbar-brand(href='#')
+  button.navbar-toggler.sidebar-minimizer.d-md-down-none(type='button') ☰
+  ul.nav.navbar-nav.d-md-down-none
+    li.nav-item.px-3
+      a.nav-link(href='#') Dashboard
+    li.nav-item.px-3
+      a.nav-link(href='#') Users
+    li.nav-item.px-3
+      a.nav-link(href='#') Settings
+  ul.nav.navbar-nav.ml-auto
+    li.nav-item.d-md-down-none
+      a.nav-link(href='#')
+        i.icon-bell
+        span.badge.badge-pill.badge-danger 5
+    li.nav-item.d-md-down-none
+      a.nav-link(href='#')
+        i.icon-list
+    li.nav-item.d-md-down-none
+      a.nav-link(href='#')
+        i.icon-location-pin
+    li.nav-item.dropdown
+      a.nav-link.dropdown-toggle.nav-link(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+        img.img-avatar(src='img/avatars/6.jpg', alt='admin@bootstrapmaster.com')
+        span.d-md-down-none admin
+      .dropdown-menu.dropdown-menu-right
+        .dropdown-header.text-center
+          strong Account
+        a.dropdown-item(href='#')
+          i.fa.fa-bell-o
+          |  Updates
+          span.badge.badge-info 42
+        a.dropdown-item(href='#')
+          i.fa.fa-envelope-o
+          |  Messages
+          span.badge.badge-success 42
+        a.dropdown-item(href='#')
+          i.fa.fa-tasks
+          |  Tasks
+          span.badge.badge-danger 42
+        a.dropdown-item(href='#')
+          i.fa.fa-comments
+          |  Comments
+          span.badge.badge-warning 42
+        .dropdown-header.text-center
+          strong Settings
+        a.dropdown-item(href='#')
+          i.fa.fa-user
+          |  Profile
+        a.dropdown-item(href='#')
+          i.fa.fa-wrench
+          |  Settings
+        a.dropdown-item(href='#')
+          i.fa.fa-usd
+          |  Payments
+          span.badge.badge-default 42
+        a.dropdown-item(href='#')
+          i.fa.fa-file
+          |  Projects
+          span.badge.badge-primary 42
+        .divider
+        a.dropdown-item(href='#')
+          i.fa.fa-shield
+          |  Lock Account
+        a.dropdown-item(href='#')
+          i.fa.fa-lock
+          |  Logout
+  button.navbar-toggler.aside-menu-toggler(type='button') ☰
