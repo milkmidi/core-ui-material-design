@@ -112,6 +112,7 @@ gulp.task('html', function (){
     pretty: true
   };
   return gulp.src(SOURCE)
+    .pipe(gulpPlumber())
     .pipe(pug(config).on('error', console.log))
     .pipe(gulp.dest('./dist'))
     .on('end',()=>{

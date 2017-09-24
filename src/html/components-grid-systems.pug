@@ -1,0 +1,46 @@
+extends _master.pug
+block content
+  mixin createContent(colCls)
+    div(class=colCls)
+      .card
+        .card-body.text-center=colCls
+
+
+  .container-fluid
+    .animated.fadeIn
+      h4.title XS Grid
+        small  Always Horizontal
+      .row
+        +createContent("col-4")
+        +createContent("col-4")
+        +createContent("col-4")
+
+      h4.title SM Grid
+        small  Collapsed at 576px - 767px
+      .row
+        +createContent("col-sm-4")
+        +createContent("col-sm-4")
+        +createContent("col-sm-4")
+      
+      h4.title MD Grid
+        small  Collapsed at 768px - 991px
+      .row
+        +createContent("col-md-4")
+        +createContent("col-md-4")
+        +createContent("col-md-4")
+      
+      h4.title LG Grid
+        small  Collapsed at 992px - 1199px
+      .row
+        +createContent("col-lg-4")
+        +createContent("col-lg-4")
+        +createContent("col-lg-4")
+
+      h4.title XL Grid
+        small  Collapsed at 1200px
+      .row
+        +createContent("col-xl-4")
+        +createContent("col-xl-4")
+        +createContent("col-xl-4")
+        
+        

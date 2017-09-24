@@ -7,7 +7,10 @@
     padding: 7px 18px;
     color: #66615B;
     border-radius: 20px;
-    margin-left: -2px;
+    &:not(:first-child),
+    &:not(:last-child){
+      margin-left: -3px;
+    }
     &:hover, 
     &.active {
       color:white;
