@@ -58,7 +58,8 @@
   background-clip: padding-box;
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($border-radius);
-  @include box-shadow($dropdown-box-shadow);
+  // @include box-shadow($dropdown-box-shadow);
+  box-shadow: $dropdown-box-shadow;
 }
 
 // Dividers (basically an `<hr>`) within the dropdown
@@ -80,6 +81,7 @@
   white-space: nowrap; // prevent links from randomly breaking onto new lines
   background: none; // For `<button>`s
   border: 0; // For `<button>`s
+  transition: background-color 0.15s;
 
   @include hover-focus {
     color: $dropdown-link-hover-color;

@@ -1,10 +1,6 @@
 
 this ford http://coreui.io/
-- http://demos.creative-tim.com/now-ui-kit/index.html#link
 - https://milkmidi.github.io/core-ui-material-design/
-- http://www.material-ui.com/
-- http://demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html
-- http://demos.creative-tim.com/material-dashboard/examples/dashboard.html
-- http://daemonite.github.io/material/index.html
-- https://mdbootstrap.com/
+- https://cristijora.github.io/paper-dashboard-pro/#/admin/overview
+- http://demos.creative-tim.com/paper-kit-2-pro/presentation.html?_ga=2.75500309.1246947216.1506383560-1028793764.1504413660
 - http://coreui.io/

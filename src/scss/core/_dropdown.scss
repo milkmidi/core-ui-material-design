@@ -3,7 +3,6 @@
   position: relative;
   padding: 10px 20px;
   border-bottom: 1px solid $dropdown-border-color;
-
   &:last-child {
     border-bottom: 0;
   }
@@ -13,7 +12,8 @@
     width: 20px;
     margin-right: 10px;
     margin-left: -10px;
-    color: $dropdown-border-color;
+    color: $gray-200;
+    // color: $gray-400 $dropdown-border-color;
     text-align: center;
   }
 

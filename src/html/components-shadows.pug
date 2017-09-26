@@ -1,0 +1,23 @@
+extends _master.pug
+block content
+  .container-fluid
+    .card
+      .card-header z-depth
+      .card-body
+        .box.z-depth z-depth
+        .box.z-depth-1 z-depth-1
+        .box.z-depth-2 z-depth-2
+        .box.z-depth-3 z-depth-3
+        .box.z-depth-4 z-depth-4
+        .box.z-depth-5 z-depth-5
+
+block script
+  style.
+    .box{
+      display: inline-block;
+      margin: 30px;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+    }

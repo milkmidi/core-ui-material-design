@@ -1,6 +1,5 @@
-.btn-group{
-  >.btn{
-    border: 2px solid #66615B;
+.btn-group {  
+  >.btn{    
     background-color: transparent;
     font-size: 14px;
     font-weight: 600;
@@ -11,12 +10,7 @@
     &:not(:last-child){
       margin-left: -3px;
     }
-    &:hover, 
-    &.active {
-      color:white;
-      background-color:#66615B;
-      border: 2px solid #66615B;
-    }
+   
     &:first-child:not(:last-child) {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
@@ -26,6 +20,18 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       border-left-width: 0;
+    }
+  }
+
+  &.btn-group-border {
+    > .btn{
+      &:hover, 
+      &.active {
+        color:white;
+        background-color:#66615B;
+        border-color: #66615B;
+      }
+      // border: 2px solid #66615B;
     }
   }
  

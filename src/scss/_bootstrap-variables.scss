@@ -5,14 +5,14 @@
 //
 
 $white:                           #fff;
-$gray-100:                        #f0f3f5;
-$gray-200:                        #c2cfd6;
-$gray-300:                        #a4b7c1;
-$gray-400:                        #869fac;
-$gray-500:                        #678898;
-$gray-600:                        #536c79;
-$gray-700:                        #3e515b;
-$gray-800:                        #29363d;
+$gray-100:                        #f0f0f0;
+$gray-200:                        #cfcfcf;
+$gray-300:                        #b7b7b7;
+$gray-400:                        #9f9f9f;
+$gray-500:                        #888888;
+$gray-600:                        #6c6c6c;
+$gray-700:                        #515151;
+$gray-800:                        #363636;
 $gray-900:                        #151b1e;
 $black:                           #000 !default;
 
@@ -53,11 +53,10 @@ $theme-colors: (
   // primary:                        #4285F4,
   // primary:                       rgb(0, 188, 212),
   primary:                       #66615B,
-  // primary:                        $blue,
-  
+  // primary:                        $blue,  
   // primary:                        #68B3C8,
   secondary:                      #7A9E9F,
-  // secondary:                      $gray-300,
+  // secondary:                      $gray-600,
   success:                        $green,
   // info:                           $cyan,
   info:                           $blue,
@@ -98,7 +97,7 @@ $card-cap-bg:                     $gray-100;
 // Dropdowns
 
 $dropdown-padding-y:              0;
-$dropdown-border-color:           $gray-200;
+$dropdown-border-color:           $gray-100;
 $dropdown-divider-bg:             $gray-100;
 
 // Buttons

@@ -17,7 +17,7 @@
 
   thead th {
     vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    border-bottom: (1 * $table-border-width) solid $table-border-color;
   }
 
   tbody + tbody {
@@ -57,7 +57,7 @@
   thead {
     th,
     td {
-      border-bottom-width: (2 * $table-border-width);
+      border-bottom-width: (1 * $table-border-width);
     }
   }
 }
