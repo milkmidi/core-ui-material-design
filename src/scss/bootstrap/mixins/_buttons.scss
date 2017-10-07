@@ -15,7 +15,7 @@
     border-color: $active-border;
   }
 
-  &:focus,
+  /* &:focus,
   &.focus {
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
@@ -23,7 +23,7 @@
     } @else {
       box-shadow: 0 0 0 3px rgba($border, .5);
     }
-  }
+  } */
 
   // Disabled comes first so active can properly restyle
   &.disabled,
