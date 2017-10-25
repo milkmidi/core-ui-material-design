@@ -89,6 +89,12 @@
     background-color: $dropdown-link-hover-bg;
   }
 
+  &.focus {
+    color: $dropdown-link-hover-color;
+    text-decoration: none;
+    background-color: $dropdown-link-hover-bg;
+  }
+
   &.active,
   &:active {
     color: $dropdown-link-active-color;
